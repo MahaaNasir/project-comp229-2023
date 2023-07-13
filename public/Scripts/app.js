@@ -18,10 +18,10 @@
       for (button of deleteButtons)
       {
         button.addEventListener('click', (event)=>{
-          if (!confirm("Delete this contact?"))
+          if (!confirm("Delete this contact?"))//Rename
           {
             event.preventDefault(); //ends the task
-            window.location.assign('/contacts-list');
+            window.location.assign('/contacts-list');//Name
           }
         });
       }

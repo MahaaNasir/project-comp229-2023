@@ -23,14 +23,14 @@
         <div class="offset-md-1 col-md-11">
             <% if (typeof profileName == 'string' && profileName) { %>
             <a href="/contacts-list/add" class="btn btn-primary" role="button" id="add-btn">
-                <i class="fas fa-plus-circle"></i> Add a Contact</a>
+                <i class="fas fa-plus-circle"></i> Add a Contact</a><!--Rename-->
             <% } %>
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- header row with insertation requirements -->
                 <tr class="d-flex">
                     <% if (typeof profileName == 'string' && profileName) { %>
-                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-3">Name</th><!--Rename-->
                         <th class="text-center col-2">Phone</th>
                         <th class="text-center col-5">Email</th>
 
@@ -39,7 +39,7 @@
                     <% } else { %>
                         <th class="text-center col-3">Name</th>
                         <th class="text-center col-2">Phone</th>
-                        <th class="text-center col-5">Email</th>
+                        <th class="text-center col-5">Email</th><!--To here-->
 
                     <% } %>
                 </tr>
@@ -47,7 +47,7 @@
 
                 <!-- sort list alphabetically -->
                 <% ContactsList.sort((a, b) => a.name.localeCompare(b.name)); %> 
-                <% for(let count = 0; count < ContactsList.length; count++) { %>
+                <% for(let count = 0; count < ContactsList.length; count++) { %><!--Rename-->
                     <tr class="d-flex">
                         <% if (typeof profileName == 'string' && profileName) { %>
                             <td class="text-center col-3"><%= ContactsList[count].name %></td>
@@ -66,7 +66,7 @@
                         <% } else { %>
                             <td class="text-center col-3"><%= ContactsList[count].name %></td>
                             <td class="text-center col-2"><%= ContactsList[count].phone %></td>
-                            <td class="text-center col-5"><%= ContactsList[count].email %></td>
+                            <td class="text-center col-5"><%= ContactsList[count].email %></td><!--To here-->
                         <% } %>
                     </tr>
                 <% } %>

@@ -9,13 +9,17 @@
 let mongoose = require('mongoose');
 
 //creating the model class - contactsModel
+//Change to surveyModel
 let contactsModel = mongoose.Schema({
     name: String,
     phone: Number,
     email: String
+    //Questions 1-5
+    //Option 1-2 for each question
 },
 {
     collection: 'contacts'
+    //surveys
 });
 
-module.exports = mongoose.model('Contacts', contactsModel);
+module.exports = mongoose.model('Contacts', contactsModel);//Fix names

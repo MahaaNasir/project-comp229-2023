@@ -12,14 +12,14 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // connecting to contacts Model
-let Contacts = require('../models/contacts');
+let Contacts = require('../models/contacts');//Will need to rename most files so they make sense
 
 module.exports.displayContactsList = async (req, res, next)=>{
     try {
         let contactsList = await Contacts.find();
 
-        res.render('contacts/list', 
-            {title: 'Contacts', 
+        res.render('contacts/list', //Here
+            {title: 'Contacts', //Here
             ContactsList: contactsList,
             profileName: req.user ? req.user.profileName : ''})
     } catch (err){
@@ -29,8 +29,8 @@ module.exports.displayContactsList = async (req, res, next)=>{
 
 module.exports.displayAddPage = async (req, res, next)=>{
     try {
-        res.render('contacts/add', 
-        {title: 'Add Contact',
+        res.render('contacts/add',//Here
+        {title: 'Add Contact',//Survey
         profileName: req.user ? req.user.profileName : ''})
     } catch (err){
         console.log(err);
@@ -46,7 +46,7 @@ module.exports.processAddPage = async (req, res, next) => {
 
     try {
         await newContacts.save();
-        res.redirect('/contacts-list')
+        res.redirect('/contacts-list')//Here
     } catch (err) {
         console.log(err);
         res.status(500).send(err);
@@ -58,8 +58,8 @@ module.exports.displayEditPage = async (req, res, next) => {
 
     try {
         let contactsToEdit = await Contacts.findById(id);
-        res.render('contacts/edit', 
-        {title: 'Edit Contact', 
+        res.render('contacts/edit', //Here
+        {title: 'Edit Contact', //Edit Survey
         contacts: contactsToEdit,
         profileName: req.user ? req.user.profileName : ''});
     } catch (err){
@@ -79,7 +79,7 @@ module.exports.processEditPage = async (req, res, next) => {
 
     try {
         await Contacts.updateOne({_id: id}, updatedContacts);
-        res.redirect('/contacts-list');
+        res.redirect('/contacts-list');//Here
     } catch (err){
         console.log(err);
         res.status(500).send(err);
@@ -91,7 +91,7 @@ module.exports.performDelete = async (req, res, next) => {
 
     try {
         await Contacts.findByIdAndRemove(id);
-        res.redirect('/contacts-list');
+        res.redirect('/contacts-list');//Here
     }catch (err){
         console.log(err);
         res.status(500).send(err);

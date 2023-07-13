@@ -26,7 +26,7 @@ let DB = require('./db');
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let contactsRouter = require('../routes/contacts');
+let contactsRouter = require('../routes/contacts');//Name
 
 // pointing the mongoose to the DB URI here
 mongoose.connect(DB.URI);
@@ -79,7 +79,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/contacts-list', contactsRouter);
+app.use('/contacts-list', contactsRouter);//Here
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
