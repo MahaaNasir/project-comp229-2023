@@ -1,6 +1,6 @@
 /*
   Assignment 2
-  File name: contacts.js
+  File name: surveys.js
   Student Name: Maha Nasir
   Student ID: 301266305
   Date: 18 June 2023
@@ -10,10 +10,10 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-// connect to the contacts Model
-let Contacts = require('../models/contacts');
+// connect to the surveys Model
+let Surveys = require('../models/surveys');
 
-let contactsController = require('../controllers/contacts')
+let surveysController = require('../controllers/surveys')
 
 // a helper function for the guard purposes
 function requireAuth(req, res, next)
@@ -26,22 +26,22 @@ function requireAuth(req, res, next)
     next();
 }
 
-// Get Route to contacts List page - READ Operation
-router.get('/', contactsController.displayContactsList);
+// Get Route to surveys List page - READ Operation
+router.get('/', surveysController.displaySurveysList);
 
 // Get Route to Add page - CREATE Operation
-router.get('/add', contactsController.displayAddPage);
+router.get('/add', surveysController.displayAddPage);
 
 // Post Route to process  Add page - CREATE Operation
-router.post('/add', contactsController.processAddPage);
+router.post('/add', surveysController.processAddPage);
 
 // Get Route to display Edit page - UPDATE Operation
-router.get('/edit/:id', contactsController.displayEditPage);
+router.get('/edit/:id', surveysController.displayEditPage);
 
 // Post Route to process Edit page - UPDATE Operation
-router.post('/edit/:id', contactsController.processEditPage);
+router.post('/edit/:id', surveysController.processEditPage);
 
 // Get to perform Deletion - Delete Operation
-router.get('/delete/:id', contactsController.performDelete);
+router.get('/delete/:id', surveysController.performDelete);
 
 module.exports = router;

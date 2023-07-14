@@ -41,22 +41,6 @@
               <a class="nav-link " href="/about"> About </a>
             </li>
 
-            <% if (title == "Projects") { %>
-            <li class="nav-item active">
-              <% } else { %>
-              <li class="nav-item">
-              <% } %>
-                <a class="nav-link " href="/projects"> Projects </a>
-            </li>
-
-            <% if (title == "Services") { %>
-            <li class="nav-item active">
-              <% } else { %>
-              <li class="nav-item">
-              <% } %>
-                <a class="nav-link " href="/services"> Services </a>
-            </li>
-
             <% if (title == "Contact") { %>
             <li class="nav-item active">
               <% } else { %>
@@ -65,12 +49,12 @@
                <a class="nav-link " href="/contact">Contact </a>
             </li>
 
-            <% if (title == "Contacts") { %>
+            <% if (title == "Surveys") { %>
               <li class="nav-item active">
                 <% } else { %>
                 <li class="nav-item ">
                 <% } %>  
-                 <a class="nav-link " href="/contacts-list">Business Contacts </a>
+                 <a class="nav-link " href="/surveys-list"> Surveys </a>
               </li>
               
               <% if (typeof profileName == 'string' && profileName) { %>

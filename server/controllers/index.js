@@ -6,7 +6,6 @@
   Date: 18 June 2023
 */
 
-//Lots of stuff to add/remove here, remove/update names etc
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -22,14 +21,6 @@ module.exports.displayHomePage = (req, res, next) => {
 
 module.exports.displayAboutPage = (req, res, next) => {
     res.render('about', { title: 'About', profileName: req.user ? req.user.profileName : '' });
-}
-
-module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('projects', { title: 'Projects', profileName: req.user ? req.user.profileName : '' });
-}
-
-module.exports.displayServicesPage = (req, res, next) => {
-    res.render('services', { title: 'Services', profileName: req.user ? req.user.profileName : '' });
 }
 
 module.exports.displayContactPage = (req, res, next) => {
@@ -72,7 +63,7 @@ module.exports.processLoginPage = (req, res, next) => {
             {
                 return next(err);
             }
-            return res.redirect('/contacts-list');
+            return res.redirect('/surveys-list');
         });
     })(req, res, next);
 }
@@ -126,7 +117,7 @@ module.exports.processRegisterPage = (req, res, next) => {
         {
             //if the registration is successful
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contacts-list')
+                res.redirect('/surveys-list')
             });
         }
     });

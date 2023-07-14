@@ -11,23 +11,23 @@
 //IIFE -- immediately Function Express
 (function(){
 
-    function Start(){
-      console.log("App Started..")
-      //alert when user clicks the danger button, confirm
-      let deleteButtons = document.querySelectorAll('.btn-danger');
-      for (button of deleteButtons)
-      {
-        button.addEventListener('click', (event)=>{
-          if (!confirm("Delete this contact?"))//Rename
-          {
-            event.preventDefault(); //ends the task
-            window.location.assign('/contacts-list');//Name
-          }
-        });
-      }
+  function Start(){
+    console.log("App Started..")
+    //alert when user clicks the danger button, confirm
+    let deleteButtons = document.querySelectorAll('.btn-danger');
+    for (button of deleteButtons)
+    {
+      button.addEventListener('click', (event)=>{
+        if (!confirm("Delete this survey?"))
+        {
+          event.preventDefault(); //ends the task
+          window.location.assign('/surveys-list');
+        }
+      });
     }
-    window.addEventListener("load", Start)
-    
+  }
+  window.addEventListener("load", Start)
+  
 })();
 
 
@@ -38,16 +38,16 @@ const nameOfTabs = document.querySelectorAll(".tabs");
 const textOfTabs = document.querySelectorAll(".tabs-text");
 
 function clickTab(event, tab) {
-  nameOfTabs.forEach((tabName) => {
-    tabName.classList.remove("active-tab");
-  });
+nameOfTabs.forEach((tabName) => {
+  tabName.classList.remove("active-tab");
+});
 
-  textOfTabs.forEach((tabText) => {
-    tabText.classList.remove("active-text");
-  });
+textOfTabs.forEach((tabText) => {
+  tabText.classList.remove("active-text");
+});
 
-  event.currentTarget.classList.add("active-tab");
-  document.getElementById(tab).classList.add("active-text");
+event.currentTarget.classList.add("active-tab");
+document.getElementById(tab).classList.add("active-text");
 }
 
 
@@ -59,19 +59,19 @@ const form = document.forms['submit-to-google-sheet'];
 const message = document.getElementById("display-message");
 
 form.addEventListener('submit', e => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      // Display success message
-      message.innerHTML = "Message sent successfully";
-      form.reset();
+e.preventDefault();
+fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  .then(response => {
+    // Display success message
+    message.innerHTML = "Message sent successfully";
+    form.reset();
 
-      // Redirect to homepage after 2 seconds
-      setTimeout(function() {
-        window.location.href = "/"; //go to home page
-      }, 2000);
-    })
-    .catch(error => console.error('Error!', error.message));
+    // Redirect to homepage after 2 seconds
+    setTimeout(function() {
+      window.location.href = "/"; //go to home page
+    }, 2000);
+  })
+  .catch(error => console.error('Error!', error.message));
 });
-    
+  
 

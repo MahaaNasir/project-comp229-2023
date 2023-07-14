@@ -1117,16 +1117,16 @@ form input, form textarea{
   margin-right: 15%;
 }
 
-/********************contacts pages**********************/
+/********************surveys pages**********************/
 /*************list**************/
 
-.contacts-container{
+.surveys-container{
   margin-top: 10%;
   margin-left: 8%;
   margin-right: 10%;  
 
 }
-#contacts-h1{
+#surveys-h1{
   color: rgb(255, 255, 255);
   margin-top: -2%;
   font-size: 35px;

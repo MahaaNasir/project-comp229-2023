@@ -1,9 +1,9 @@
 <!--
   Assignment 2
-  File name: add.ejs
+  File name: edit.ejs
   Student Name: Maha Nasir
   StudentID: 301266305
-  Date: 18 June 2023
+  Date:  18 June 2023
 -->
 
 <!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
@@ -12,49 +12,56 @@
 <!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
 <%- include ../partials/main_nav.ejs %>
 
-<!--  This page includes add contacts section ---->
+<!--  This page includes edit surveys section ---->
 
 <!-- main ---->
-<main class="contacts-container">
-    <h1 id="add-h1"><%= title %></h1>
-    <!-- add contact information ---->
+<main class="surveys-container">
+    <h1 id="edit-h1"><%= title %></h1>
+    <!-- edit contact information ---->
     <div class="row" id="add-form">
         <div class="offset-md-3 col-md-6">
             <form class="form" method="POST">
+                <!-- edit name---->
                 <div class="form-group">
-                    <!-- add question. This just needs to be copy/pasted 5 times for the default questions---->
                     <label for="nameTextField">Name</label>
                     <input type="text" class="form-control"
                     id="nameTextField" 
-                    placeholder="Enter Question 1"
-                    name="name" required></input>
+                    placeholder="Enter the name"
+                    name="name" 
+                    value="<%= surveys.name %>"
+                    required>
+                    
                 </div>
-                <!-- add option1---->
+                <!-- edit phone---->
                 <div class="form-group">
                     <label for="phoneTextField">Phone</label>
                     <input type="text" class="form-control"
                     id="phoneTextField" 
-                    placeholder="Enter Option 1"
-                    name="phone" required></input>
+                    placeholder="Enter the phone number "
+                    name="phone"
+                    value="<%= surveys.phone %>"
+                    required>
+                    
                 </div>
-                <!-- add option2---->
+                <!-- edit email---->
                 <div class="form-group">
                     <label for="emailTextField">Email</label>
                     <input type="text" class="form-control"
                     id="emailTextField" 
-                    placeholder="Enter Option 2"
-                    name="email" required></input>
+                    placeholder="Enter the email address"
+                    name="email" 
+                    value="<%= surveys.email %>"
+                    required>
+                    
                 </div>
                 <br>
-                <!--What about having a button here to add a new question, that way the user can choose 
-                how many questions they would like, instead of having a set number of 5? 
-                Or does that seem like a lot of work?-->
-                <!-- submit and cancel buttons---->
+                <!-- submit and cancel buttons ---->
                 <button class="btn btn primary" type="submit" id="submit-btn">
                     <i class="fas fa-edit"></i>
                     Submit
                 </button>
-                <a href="/contacts-list" class="btn btn-warning">
+
+                <a href="/surveys-list" class="btn btn-warning">
                     <i class="fas fa-undo"></i>
                     Cancel
                 </a>
@@ -62,6 +69,7 @@
         </div>
     </div>
 </main>
+
 
 <!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
 <%- include ../partials/bottom_nav.ejs %>

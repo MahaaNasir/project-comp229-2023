@@ -6,7 +6,6 @@
   Date: 18 June 2023
 */
 
-//Some crud here. remove routes etc.
 var express = require('express');
 var router = express.Router();
 
@@ -20,12 +19,6 @@ router.get('/home', indexController.displayHomePage);
 
 /* GET Route to display about page. */
 router.get('/about', indexController.displayAboutPage);
-
-/* GET Route to display products page. */
-router.get('/projects', indexController.displayProjectsPage);
-
-/* GET Route to display services page. */
-router.get('/services', indexController.displayServicesPage);
 
 /* GET Route to display contact page. */
 router.get('/contact', indexController.displayContactPage);
