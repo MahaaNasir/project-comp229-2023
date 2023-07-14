@@ -1,11 +1,10 @@
 /************************* css for all the pages ********************************/
 
 /*
-  Assignment 2
   File name: app.css
-  Student Name: Maha Nasir
-  Student ID: 301266305
-  Date: 18 June 2023
+  Project Part 2
+  Group 1
+  Due: Jul 16, 2023
 */
 
 body{
@@ -256,10 +255,10 @@ form input, form textarea{
   width: 90%;
   border: 0;
   outline: none;
-  background: rgba(63, 63, 96, 0.817);
+  background: rgba(61, 61, 100, 0.817);
   padding: 10px;
   margin: 5px 0;
-  color:#a6a5a5;
+  color:#ffffff;
   font-size: 14px;
   border-radius: 7px;
 }
@@ -287,7 +286,7 @@ form input, form textarea{
 }
 
 #display-message{
-  color:rgb(13, 114, 13);
+  color:rgb(129, 133, 71);
   margin-top: 10px;
   display: block;
 }

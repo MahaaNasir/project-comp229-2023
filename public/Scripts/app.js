@@ -1,11 +1,10 @@
 //Javascript for all the pages
 
 /*
-  Assignment 2
   File name: app.js
-  Student Name: Maha Nasir
-  Student ID: 301266305
-  Date: 18 June 2023
+  Project Part 2
+  Group 1
+  Due: Jul 16, 2023
 */
 
 //IIFE -- immediately Function Express

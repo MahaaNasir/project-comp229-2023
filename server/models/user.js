@@ -1,9 +1,8 @@
 /*
-  Assignment 2
   File name: user.js
-  Student Name: Maha Nasir
-  Student ID: 301266305
-  Date: 18 June 2023
+  Project Part 2
+  Group 1
+  Due: Jul 16, 2023
 */
 
 let mongoose = require('mongoose');
