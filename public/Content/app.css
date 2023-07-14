@@ -237,7 +237,7 @@ html{
   padding: 8px 8px;
   box-sizing: border-box;
   text-decoration: none;
-  color: rgb(26, 20, 97);
+  color: rgb(17, 11, 81);
   cursor: pointer;
   font-weight: 1000;
   font-size: 14px;
@@ -270,7 +270,7 @@ form input, form textarea{
   margin-top: 6px;
   text-align: center;
   width: 7rem;
-  background: #43439a;
+  background: #202078;
   border-radius: 16px;
   padding: 10px 5px;
   box-sizing: border-box;
@@ -282,7 +282,7 @@ form input, form textarea{
   font-size: 14px;
 }
 #submit:hover{
-  background: #949dfda7;
+  background: #4b55c0a7;
 }
 
 #display-message{
