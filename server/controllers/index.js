@@ -24,7 +24,7 @@ module.exports.displayAboutPage = (req, res, next) => {
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('contact', { title: 'Contact Us', profileName: req.user ? req.user.profileName : '' });
+    res.render('contact', { title: 'Contact', profileName: req.user ? req.user.profileName : '' });
 }
 
 module.exports.displayLoginPage = (req, res, next) => {

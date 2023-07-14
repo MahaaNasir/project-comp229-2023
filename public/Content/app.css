@@ -25,8 +25,8 @@ body{
 /*Navigation bar*/
 
 .bg-custom {
-  background: linear-gradient(to right, #000000, #1f0000); 
-  outline: 2px solid rgb(122, 61, 61);
+  background: linear-gradient(to right, #0c0c4e, #01011d); 
+  outline: 2px solid rgb(45, 81, 171);
 }
 
 .navbar_contents .navbar{
@@ -42,8 +42,8 @@ body{
 }
 .nav-item.active,
 .nav-item:active {
-  background: linear-gradient(to right, #560303,rgba(122, 61, 61, 0.872)); 
-  background: rgba(122, 61, 61, 0.872);
+  background: linear-gradient(to right, #090356,rgba(68, 61, 122, 0.872)); 
+  background: rgba(61, 61, 122, 0.872);
 }
 
 /************************* index.ejs ********************************/
@@ -111,59 +111,6 @@ h2 span{
          
 footer {
   margin-top: 110px;
-}
-
-/*Icons*/
-
-.social{
-  transition: transform 4s;
-  margin-right: 20px;
-}
-.social:hover{
-  transition: translateY(-5px);
-}
-
-.social-facebook{
-  color:#3477eb;
-  transition:color 0.2s;
-  text-decoration: none;
-  margin: 2px;
-  font-size: 25px ;
-}
-.social-facebook:hover {
-  color:rgb(43, 80, 190);
-}
-
-.social-instagram{
-  color:#9e216e;
-  transition:color 0.2s;
-  text-decoration: none;
-  margin: 2px;
-  font-size: 25px ;
-}
-.social-instagram:hover {
-  color:rgb(129, 3, 91);
-}
-
-.social-linkedin{
-  color:#2bb9f1;
-  transition:color 0.2s;
-  text-decoration: none;
-  margin: 2px;
-  font-size: 25px ;
-}
-.social-linkedin:hover {
-  color:rgb(3, 96, 132);
-}
-.social-github{
-  color:#9b9898;
-  transition:color 0.2s;
-  text-decoration: none;
-  margin: 2px;
-  font-size: 25px ;
-}
-.social-github:hover {
-  color:rgb(255, 255, 255);
 }
 
 /************************* about.ejs ********************************/
@@ -307,16 +254,6 @@ html{
   margin-left: -13px;
 }
 
-#send-icon{
-  color: rgb(221, 112, 112);
-  margin-right: 15px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-#send-icon:hover{
-  color: rgb(243, 206, 206);
-}
 
 #contact-btn{
   display: inline-block;
@@ -329,14 +266,14 @@ html{
   padding: 8px 8px;
   box-sizing: border-box;
   text-decoration: none;
-  color: rgb(97, 20, 20);
+  color: rgb(26, 20, 97);
   cursor: pointer;
   font-weight: 1000;
   font-size: 14px;
 }
 
 #contact-btn:hover{
-  background: rgb(174, 94, 107);
+  background: rgb(97, 94, 174);
 }
 .contact-form form{
   width: 100%;
@@ -347,7 +284,7 @@ form input, form textarea{
   width: 90%;
   border: 0;
   outline: none;
-  background: rgba(96, 84, 84, 0.817);
+  background: rgba(63, 63, 96, 0.817);
   padding: 10px;
   margin: 5px 0;
   color:#a6a5a5;
@@ -362,7 +299,7 @@ form input, form textarea{
   margin-top: 6px;
   text-align: center;
   width: 7rem;
-  background: #9a4344;
+  background: #43439a;
   border-radius: 16px;
   padding: 10px 5px;
   box-sizing: border-box;
@@ -374,7 +311,7 @@ form input, form textarea{
   font-size: 14px;
 }
 #submit:hover{
-  background: #fd9494a7;
+  background: #949dfda7;
 }
 
 #display-message{
@@ -383,240 +320,14 @@ form input, form textarea{
   display: block;
 }
 
-/************************* services.ejs ********************************/
-/*My Services Page*/
-
-#my-services{
-  padding: 20px -30px ;
-}
-
-#services-h1{
-  color: rgb(255, 255, 255);
-  margin-top: 10%;
-  font-size: 40px;
-  margin-left: -15%;
-}
-
-.services-text{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.services-text div{
-  background: rgba(128, 128, 128, 0.527);
-  padding: 30px;
-  font-size: 12px;
-  font-weight: 300;
-  border: 50px ;
-  border-radius: 20px;
-  margin-top: 70%;
-  line-height: 1.5;
-  transition: background 0.5s, transform 0.5s;
-}
-.services-text div:hover{
-  background:rgba(230, 180, 180, 0.404);
-  transform: translateY(-11px);
-}
-
-.services-text h3{
-  margin-bottom: 20px;
-  font-size: 17px;
-}
-
-.services-text img{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-  margin-top: 30px;
-  vertical-align: bottom;
-  margin-bottom: 5px;
-}
-
-/************************* projects.ejs ********************************/
-/*Projects Page*/
-
-#projects{
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 30px 30px;
-  margin-top: 12%; 
-  border-radius: 90px;
-}
-
-#projects-h1{
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  margin-left: -9%;
-  margin-top: -3%;
-}
-
-.project{
- border-radius: 15px;
- overflow: hidden;
- position: relative;
- display: inline-block;
- margin-top: 2%;
- margin-left: 2%;
-}
-
-.project img{
-  border-radius: 15px;
-  height: 237px;
-  width: 463px;
-  display: block;
-  transition: transform 0.9s;
-}
-
-.show-projects{
-  margin-left:0%;
-}
-
-.project-details{
-  transition:  0.6s;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;   
-  padding: 0px 20px;
-  position: absolute;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.902),rgba(0, 0, 0, 0.842),rgba(66, 36, 36, 0.8), rgba(130, 90, 90, 0.984), rgba(250, 176, 176, 0.984));
-  flex-direction: column;
-  line-height: 1.5rem;
-  overflow: hidden;
-  font-size: 14px;
-  color: rgb(255, 255, 255);
-  transform: translateY(100%);
-}
-
-.project-details h3{
-  font-weight: 950;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.project-details h5{
-  margin-bottom: 15px;
-  font-weight: 900;
-  font-size: 12px;
-}
-
-.project:hover img{
-  transform: scale(1.2);
-}
-
-.project:hover .project-details{
-  transform: translateY(0%);
-}
-
-.project-details a{
-  font-size: 22px;
-  margin-top: 20px;
-  color:rgb(177, 90, 90);
-  background:  rgb(255, 255, 255);
-  width: 40px;
-  margin-top: 15px;
-  border-radius: 50%;
-  line-height: 40px;
-  text-align:center;
-}
-
-.open-page{
-  transition: 0.2s;
-  text-decoration: none;
-  margin: 2px;
-}
-
-.open-page:hover {
-  color:rgb(255, 255, 255);
-  background:  rgb(135, 128, 128);
-}
-
-#project-btn{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 10rem;
-  background: #803033;
-  border-radius: 16px;
-  padding: 20px 30px;
-  color: #fff;
-  box-shadow: 3px 8px 22px rgba(15, 15, 99, 0.15);
-  border: none;
-  cursor: pointer;
-  margin-top: 15px ;
-  font-size: 15px;
-}
-
-#project-btn:hover{
-  display: block;
-  background: #fca1a177;
-  border: none;
-}
-#invisible-projects{
-  display: none;
-}
-
-
-/************************* Making Pages Responsive ********************************/
-
-@media (max-width: 1200px) and (max-height:1026px) {
-  #projects-h1{
-      margin-left: -4%;
-  }
-  
-  .project img{
-      height: 437px;
-      width: 803px;
-  }
-  .show-projects{
-      margin-left:0%;
-  }
-}
 
 @media (max-width: 988px) and (max-height:1026px) {
 
-  /*services*/
-  #services-h1{
-     margin-top: 12%;
-     margin-left: -2%;
-  }
-
-  .services-text div{
-      margin-top: 75%;
-      margin-bottom: -75%;
-  }
-
-  .services-text{
-      margin-bottom: 40%;
-  }
-
+  
   /*About Page*/
   #about-h1{
       margin-left: 12%;
       margin-top: 5%; 
-  }
-  
-  /*Project Page*/
-  #projects{
-      zoom: 80%;
-  }
-
-  #projects-h1{
-      margin-left: -44%;
-  }
-  
-  .project img{
-      height: 237px;
-      width: 403px;
   }
 }
 
@@ -639,38 +350,6 @@ form input, form textarea{
       margin-left: 20%;
       margin-top: -18%;
   }    
-
-  /*services*/
-  #services-h1{
-      margin-top: 18%;
-      margin-left: -2%;
-  }
-}
-@media (max-width: 735px) and (max-height:1026px) { 
-  /*Services page*/
-
-  #services-h1{
-      margin-top: 15%;
-      margin-left: -2%;
-  }
-
-  .services-text div{
-      margin-top: 85%;
-      margin-bottom: -75%;
-  }
-  .services-text{
-      margin-bottom: 60%;
-  } 
-
-  /*Projects page*/
-  #projects{
-      margin-left: -20%;
-      margin-top: 20%;
-  }
-
-  #projects-h1{
-      margin-top: -4%;
-  }
 }
 
 @media (max-width: 648px) and (max-height:1026px) { 
@@ -685,12 +364,6 @@ form input, form textarea{
       margin-top: 8%;
   }
 
-  /*Services page*/
-  #services-h1{
-      margin-top: 20%;
-      margin-left: -2%;
-  }
-
   /*Contact page*/
   #contact-h1{
       margin-left: 15px;
@@ -700,12 +373,6 @@ form input, form textarea{
       margin-left: 10px;
       margin: 2%;
       margin-top: 10%;
-  }
-
-  /*Projects page*/
-  #projects{
-      zoom: 60%;
-      margin-left: -8%;
   }
 }
 
@@ -738,11 +405,6 @@ form input, form textarea{
       width: 200px;
   }
 
-  /*projects page*/
-  #projects{
-      zoom: 50%;
-  }
-
   /*ABOUT page*/
   .tabs {
       margin-right: 20%;
@@ -756,45 +418,9 @@ form input, form textarea{
       margin: 20px 80px 0px;
   }
 
-  /*services page*/
-  #services-h1{
-      margin-top: -20%;
-      margin-left: 10%;
-  }
-
-  .services-text div{
-      margin-top: -5%;
-      margin-bottom: 5%;
-  }
-
-  .services-text{
-      margin-bottom: 20%;
-      margin-top: 50%;
-  }
 }
 
 @media (max-width: 382px) and (max-height:1026px) {  
-
-  /*services page*/
-  #services-h1{
-      margin-top: -2%;
-      margin-left: 10%;
-  }
-
-  .services-text div{
-      margin-top: 25%;
-      margin-bottom: -25%;
-  }
-
-  .services-text{
-      margin-bottom: 70%;
-      margin-top: 50%;
-  }
-
-  /*projects page*/
-  #projects{
-      zoom: 40%;
-  }
 
   /*HOME page*/
   .right .image-container{
@@ -824,22 +450,6 @@ form input, form textarea{
 
   .left h2{
       margin-left: 45%;
-  }
-  
-  /*services page*/
-  #services-h1{
-      margin-top: 20%;
-      margin-left: 10%;
-  }
-
-  .services-text div{
-      margin-top: 65%;
-      margin-bottom: -55%;
-  }
-
-  .services-text{
-      margin-bottom: 120%;
-      margin-top: 50%;
   }
 }
 
