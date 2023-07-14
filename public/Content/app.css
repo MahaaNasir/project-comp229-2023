@@ -126,6 +126,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: -4%;
+
 }
 
 .column-1{
@@ -149,24 +150,17 @@ footer {
   margin-right: 15%;
   margin-top: 19%;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-#me{
-  height: 350px;
-  width:  314px;
+#us{
+  height: 300px;
+  width:  350px;
   margin-left: 12%;
   margin-top: 25%;
-  border-radius: 30px;
-  filter: grayscale(1);
-  transition: 1s;
 }
 
-#me:hover{
-  filter: grayscale(0.5);
-}
-
-.about-tabs{
+.about-info{
   display: flex;
   margin: 20px 110px 0px;
 }
@@ -175,7 +169,7 @@ html{
   overflow-x: hidden;
 }
 
-.tabs{
+.team{
   margin-right: 40px;
   font-size: 14px;
   font-weight: 700;
@@ -183,44 +177,21 @@ html{
   position: relative;
   margin-top: -3%;
 }
-.tabs::after{
-  content: '';
-  transition: 0.5s;
-  height: 3px;
-  background: rgb(155, 133, 133);
-  width: 0;
-  left:0;
-  font-weight: 20px;
-  cursor: pointer;
-  bottom: -8px;
-  position: absolute;
-}
-.tabs.active-tab::after{
-  width: 55%;
-}
 
-.tabs-text{
+.info-text{
   margin-left: 11%;
   margin-top: -1%;
   font-size: 12px;
 }
 
-.tabs-text ul li{
+.info-text ul li{
  list-style: none;
  margin: 10px 0;
 }
 
-.tabs-text ul li span{
+.info-text ul li span{
   color: rgb(155, 133, 133);
   font-size: 11px;
-}
-
-.tabs-text{
- display: none;
-}
-
-.tabs-text.active-text{
-  display: block;
 }
 
 
