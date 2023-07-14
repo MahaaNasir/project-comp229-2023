@@ -59,7 +59,7 @@ module.exports.displayEditPage = async (req, res, next) => {
     try {
         let surveysToEdit = await Surveys.findById(id);
         res.render('surveys/edit', 
-        {title: 'Edit Contact', 
+        {title: 'Edit Survey', 
         surveys: surveysToEdit,
         profileName: req.user ? req.user.profileName : ''});
     } catch (err){

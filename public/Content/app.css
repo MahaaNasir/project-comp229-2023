@@ -190,7 +190,7 @@ html{
 }
 
 .info-text ul li span{
-  color: rgb(155, 133, 133);
+  color: rgb(153, 155, 133);
   font-size: 11px;
 }
 
@@ -293,8 +293,6 @@ form input, form textarea{
 
 
 @media (max-width: 988px) and (max-height:1026px) {
-
-  
   /*About Page*/
   #about-h1{
       margin-left: 12%;
@@ -440,12 +438,12 @@ form input, form textarea{
 }
 
 .btn-success {
-  background-color: #3d3939;
+  background-color: #110b62;
   color: #fff;
   border:2px solid rgba(255, 255, 255, 0.308);
 }
 .btn-success:hover {
-  background-color: #5e5555;
+  background-color: #454775;
   border:2px solid rgba(255, 255, 255, 0.308);
 }
 
@@ -461,10 +459,10 @@ form input, form textarea{
 }
 
 #register-link{
-  color: #d49798;
+  color: #c8d497;
 }
 #register-link:hover{
-  color: #e0d0d0;
+  color: #c7d648;
 }
 #password{
   margin-bottom: 2%;
@@ -526,17 +524,17 @@ form input, form textarea{
   margin-left: -9%;
 }
 .table {
-  background-color: #3b2727;
+  background-color: #1b1f41;
 }
 
 #add-btn{
   margin-top: 2%;
-  background-color: #7e4b4b;
+  background-color: #17185c;
   border:2px solid rgba(255, 255, 255, 0.308);
   margin-bottom: 2%;
 }
 #add-btn:hover{
-  background-color: #816363;
+  background-color: #314898;
   border:2px solid rgba(255, 255, 255, 0.308);
 }
 /*************add**************/
@@ -551,12 +549,12 @@ form input, form textarea{
 }
 
 #submit-btn{
-  background: #7e4b4b;
+  background: #121773;
   color: rgb(255, 255, 255);
   border:2px solid rgba(255, 255, 255, 0.308);
 }
 #submit-btn:hover{
-  background: #3d2d2d;
+  background: #3f59ad;
 }
 
 /*************edit**************/
