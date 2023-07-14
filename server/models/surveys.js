@@ -13,7 +13,28 @@ let surveysModel = mongoose.Schema({
     name: String,
     phone: Number,
     surveyName: String,
-    email: String
+    email: String,
+
+     //survey questions
+     q1: String,
+     a1Option1: String,
+     a1Option2: String,
+
+     q2: String,
+     a2Option1: String,
+     a2Option2: String,
+
+     q3: String,
+     a3Option1: String,
+     a3Option2: String,
+
+     q4: String,
+     a4Option1: String,
+     a4Option2: String,
+
+     q5: String,
+     a5Option1: String,
+     a5Option2: String
 },
 {
     collection: 'surveys'

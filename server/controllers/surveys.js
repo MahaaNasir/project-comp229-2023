@@ -41,7 +41,29 @@ module.exports.processAddPage = async (req, res, next) => {
     let newSurveys = new Surveys({
         "name": req.body.name,
         "phone": req.body.phone,
-        "email": req.body.email
+        "surveyName": req.body.surveyName,
+        "email": req.body.email,
+
+         //survey questions
+         "q1": req.body.q1,
+         "a1Option1": req.body.a1Option1,
+         "a1Option2": req.body.a1Option2,
+ 
+         "q2": req.body.q2,
+         "a2Option1": req.body.a2Option1,
+         "a2Option2": req.body.a2Option2,
+ 
+         "q3": req.body.q3,
+         "a3Option1": req.body.a3Option1,
+         "a3Option2": req.body.a3Option2,
+ 
+         "q4": req.body.q4,
+         "a4Option1": req.body.a4Option1,
+         "a4Option2": req.body.a4Option2,
+ 
+         "q5": req.body.q5,
+         "a5Option1": req.body.a5Option1,
+         "a5Option2": req.body.a5Option2
     });
 
     try {
@@ -73,8 +95,30 @@ module.exports.processEditPage = async (req, res, next) => {
 
     let updatedSurveys = {
         "name": req.body.name,
+        "surveyName": req.body.surveyName,
         "phone": req.body.phone,
-        "email": req.body.email
+        "email": req.body.email,
+
+        //survey questions
+        "q1": req.body.q1,
+        "a1Option1": req.body.a1Option1,
+        "a1Option2": req.body.a1Option2,
+
+        "q2": req.body.q2,
+        "a2Option1": req.body.a2Option1,
+        "a2Option2": req.body.a2Option2,
+
+        "q3": req.body.q3,
+        "a3Option1": req.body.a3Option1,
+        "a3Option2": req.body.a3Option2,
+
+        "q4": req.body.q4,
+        "a4Option1": req.body.a4Option1,
+        "a4Option2": req.body.a4Option2,
+
+        "q5": req.body.q5,
+        "a5Option1": req.body.a5Option1,
+        "a5Option2": req.body.a5Option2
     };
 
     try {

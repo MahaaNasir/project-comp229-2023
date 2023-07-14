@@ -1,9 +1,8 @@
 <!--
-  Assignment 2
+  Project Part 2
   File name: list.ejs
-  Student Name: Maha Nasir
-  StudentID: 301266305
-  Date: 18 June 2023
+  Group 1
+  Due: Jul 16, 2023
 -->
 
 <!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
@@ -30,16 +29,18 @@
                 <!-- header row with insertation requirements -->
                 <tr class="d-flex">
                     <% if (typeof profileName == 'string' && profileName) { %>
-                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-2">Name</th>
                         <th class="text-center col-2">Phone</th>
-                        <th class="text-center col-5">Email</th>
+                        <th class="text-center col-2">Survey Name</th>
+                        <th class="text-center col-4">Email</th>
 
                         <th class="text-center col-1"></th>
                         <th class="text-center col-1"></th>
                     <% } else { %>
-                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-2">Name</th>
                         <th class="text-center col-2">Phone</th>
-                        <th class="text-center col-5">Email</th>
+                        <th class="text-center col-2">Survey Name</th>
+                        <th class="text-center col-4">Email</th>
 
                     <% } %>
                 </tr>
@@ -50,9 +51,10 @@
                 <% for(let count = 0; count < SurveysList.length; count++) { %>
                     <tr class="d-flex">
                         <% if (typeof profileName == 'string' && profileName) { %>
-                            <td class="text-center col-3"><%= SurveysList[count].name %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].name %></td>
                             <td class="text-center col-2"><%= SurveysList[count].phone %></td>
-                            <td class="text-center col-5"><%= SurveysList[count].email %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].surveyName %></td>
+                            <td class="text-center col-4"><%= SurveysList[count].email %></td>
 
                             <!-- buttons to edit or delete the row ---->
                             <td class="text-center col-1">
@@ -64,9 +66,10 @@
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
                         <% } else { %>
-                            <td class="text-center col-3"><%= SurveysList[count].name %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].name %></td>
                             <td class="text-center col-2"><%= SurveysList[count].phone %></td>
-                            <td class="text-center col-5"><%= SurveysList[count].email %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].surveyName %></td>
+                            <td class="text-center col-4"><%= SurveysList[count].email %></td>
                         <% } %>
                     </tr>
                 <% } %>
