@@ -87,9 +87,9 @@ h1 span{
 h2 span{
   color: rgb(215, 203, 127); 
   padding: 10px 5px; 
-  font-family: Tilt Prism;
+  font-family: Caveat;
   display: table-cell;
-  font-size: 0.9em;
+  font-size: 1.2em;
   text-shadow: 0 15px 25px rgb(215, 203, 127);
 }
 
