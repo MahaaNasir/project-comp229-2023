@@ -19,6 +19,7 @@ body{
   color: azure;
   background:rgb(67, 84, 135);
   min-height: 100%;
+  font-family: Quicksand;
 }
 
 /************************* main_nav.ejs ********************************/

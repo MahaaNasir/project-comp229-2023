@@ -12,6 +12,7 @@ let mongoose = require('mongoose');
 let surveysModel = mongoose.Schema({
     name: String,
     phone: Number,
+    surveyName: String,
     email: String
 },
 {
