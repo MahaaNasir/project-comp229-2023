@@ -2,7 +2,7 @@
   File name: app.js
   Project Part 2
   Group 1
-  Due: Jul 16, 2023
+  Due: Jul 16, 2023 
 */
 
 
