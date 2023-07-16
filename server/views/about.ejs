@@ -1,0 +1,54 @@
+<!--
+  Project Part 2
+  File name: about.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include partials/header.ejs %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include partials/main_nav.ejs %>
+
+<!--  This page includes About me section ---->
+<!-- main ---->
+<main class="container">
+    <div id="about">
+        <div class="content">
+            <div class="about-row">
+                <div class="column-1">
+                   <img src="Assets/images/team2.png" id="us">
+                </div>
+                <div class="column-2">
+                    <!-- Information about us ---->
+                    <h1 id="about-h1">About Us</h1>
+                    <p id="about-p">
+                        Hi! We are Web Titans - Team 1<br>
+                    </p>
+                    <!-- info ---->
+                    <div class="about-info">
+                      <p class="team">Team Members</p>
+                      
+                   </div>
+                   <div class="info-text">
+                        <ul>
+                          <li>Ali Khaleel - <span>Project Manager</span></li>
+                          <li>Alessandra Primatesta - <span>Security Programmer</span></li>
+                          <li>Maha Nasir - <span>Front-End Developer</span></li>
+                          <li>Tyler Dakin - <span>Back-End Developer</span></li>
+                          <li>Tanya Truong - <span>Database Programmer</span></li>
+                          <li>Yeyul Choi - <span>Back-End Developer</span></li>
+                        </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include partials/footer.ejs %>
