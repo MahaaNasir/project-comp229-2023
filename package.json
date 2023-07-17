@@ -27,12 +27,12 @@
     "popper.js": "^1.16.1"
   },
   "description": "project",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MahaaNasir/Assignment1-COMP229-Maha.git"
   },
-  "author": "Maha Nasir",
+  "author": "COMP-229 Group 1",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MahaaNasir/Assignment1-COMP229-Maha/issues"
