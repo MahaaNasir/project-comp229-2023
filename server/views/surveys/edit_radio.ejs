@@ -1,0 +1,236 @@
+<!--
+  Project Part 2
+  File name: edit_radio.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include ../partials/header.ejs  %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include ../partials/main_nav.ejs %>
+
+<!--  This page includes add surveys section ---->
+
+<!-- main ---->
+<main class="surveys-container">
+    <h1 id="add-h1"><%= title %></h1>
+    <!-- add contact information ---->
+    <div class="row" id="add-form">
+        <div class="offset-md-3 col-md-6">
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <br>
+                    <!-- edit user---->
+                    <div class="form-group">
+                        <label for="nameTextField">User</label>
+                        <input type="text" class="form-control"
+                        id="nameTextField" 
+                        placeholder="Enter your name"
+                        name="name" 
+                        value="<%= surveys.name %>"
+                        required>
+                    </div>
+                   
+                    <!-- edit survey name ---->
+                    <div class="form-group">
+                        <label for="surveyNameTextField">Survey Name</label>
+                        <input type="text" class="form-control"
+                        id="surveyNameTextField" 
+                        placeholder="Enter Survey Name"
+                        name="surveyName" 
+                        value="<%= surveys.surveyName %>"
+                        required>
+                    </div>
+                    <!-- edit email---->
+                    <div class="form-group">
+                        <label for="emailTextField">Email</label>
+                        <input type="text" class="form-control"
+                        id="emailTextField" 
+                        placeholder="Enter your email address"
+                        name="email" 
+                        value="<%= surveys.email %>"
+                        required>
+                    </div>
+
+                <!-- Survey type---->
+                <div class="form-group">
+                    <label for="typeTextField">Survey Type </label>
+                    <input type="text" class="form-control"
+                    id="typeTextField" 
+                    value="Radio Buttons" 
+                    name="surveyType" 
+                    readonly></input>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- add questions (with radio buttons) -->
+        <div class="questions">
+            <div class="form-group">
+                <label for="q1TextField">Question 1</label>
+                <input type="text" class="form-control" id="q1RadioButtonTextField" placeholder="Add your question" name="q1RadioButton" value="<%= surveys.q1RadioButton %>">
+                <div class="form-check">
+                    <input type="radio"  class="form-check-input" id="a1Option1Radio" name="a1RadioButton1" value="Option 1" <%= surveys.a1RadioButton1 === "Option 1" ? 'checked' : '' %> >
+                    <label class="form-check-label" for="a1Option1Radio">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="a1Option1Text" placeholder="Enter custom option" name="a1RadioButtonText1" value="<%= surveys.a1RadioButtonText1 %>" >
+                        </div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="a1Option2Radio" name="a1RadioButton1" value="Option 2" <%= surveys.a1RadioButton1 === "Option 2" ? 'checked' : '' %> >
+                    <label class="form-check-label" for="a1Option2Radio"> 
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="a1Option2Text" placeholder="Enter custom option" name="a1RadioButtonText2" value="<%= surveys.a1RadioButtonText2 %>" >
+                        </div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="a1Option3Radio" name="a1RadioButton1" value="Option 3" <%= surveys.a1RadioButton1 === "Option 3" ? 'checked' : '' %>  >
+                    <label class="form-check-label" for="a1Option3Radio"> 
+                        <div class="form-group">
+                           <input type="text" class="form-control" id="a1Option3Text" placeholder="Enter custom option" name="a1RadioButtonText3"  value="<%= surveys.a1RadioButtonText3 %>" >
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="q1TextField">Question 2</label>
+                <input type="text" class="form-control" id="q2RadioButtonTextField" placeholder="Add your question" name="q2RadioButton" value="<%= surveys.q2RadioButton %>">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="a2Option1Radio" name="a2RadioButton1" value="Option 1" <%= surveys.a2RadioButton1 === "Option 1" ? 'checked' : '' %> >
+                        <label class="form-check-label" for="a2Option1Radio">
+                            <div class="form-group">
+                                <input type="text"class="form-control" id="a2Option1Text" placeholder="Enter custom option" name="a2RadioButtonText1" value="<%= surveys.a2RadioButtonText1 %>">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="a2Option2Radio" name="a2RadioButton1" value="Option 2"<%= surveys.a2RadioButton1 === "Option 2" ? 'checked' : '' %>>
+                        <label class="form-check-label" for="a2Option2Radio"> 
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="a2Option2Text" placeholder="Enter custom option" name="a2RadioButtonText2" value="<%= surveys.a2RadioButtonText2 %>" >
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="a2Option3Radio" name="a2RadioButton1" value="Option 3" <%= surveys.a2RadioButton1 === "Option 3" ? 'checked' : '' %> >
+                            <label class="form-check-label" for="a2Option3Radio">
+                             <div class="form-group">
+                                <input type="text" class="form-control" id="a2Option3Text" placeholder="Enter custom option" name="a2RadioButtonText3" value="<%= surveys.a2RadioButtonText3 %>" >
+                            </label>
+                       </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="q3TextField">Question 3</label>
+                        <input type="text" class="form-control" id="q3RadioButtonTextField" placeholder="Add your question" name="q3RadioButton" value="<%= surveys.q3RadioButton %>">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a3Option1Radio" name="a3RadioButton1" value="Option 1" <%= surveys.a3RadioButton1 === "Option 1" ? 'checked' : '' %>>
+                                <label class="form-check-label" for="a3Option1Radio">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="a3Option1Text" placeholder="Enter custom option" name="a3RadioButtonText1" value="<%= surveys.a3RadioButtonText1 %>">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a3Option2Radio" name="a3RadioButton1" value="Option 2" <%= surveys.a3RadioButton1 === "Option 2" ? 'checked' : '' %> >
+                                <label class="form-check-label" for="a3Option2Radio"> 
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="a3Option2Text" placeholder="Enter custom option" name="a3RadioButtonText2" value="<%= surveys.a3RadioButtonText2 %>">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a3Option3Radio" name="a3RadioButton1" value="Option 3"<%= surveys.a3RadioButton1 === "Option 3" ? 'checked' : '' %> >
+                                <label class="form-check-label" for="a3Option3Radio">
+                                     <div class="form-group">
+                                       <input type="text" class="form-control" id="a3Option3Text" placeholder="Enter custom option" name="a3RadioButtonText3" value="<%= surveys.a3RadioButtonText3 %>" >
+                               </label>
+                         </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="q4TextField">Question 4</label>
+                        <input type="text" class="form-control" id="q4RadioButtonTextField" placeholder="Add your question" name="q4RadioButton" value="<%= surveys.q4RadioButton %>">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a1Option1Radio" name="a4RadioButton1" value="Option 1" <%= surveys.a4RadioButton1 === "Option 1" ? 'checked' : '' %>>
+                                   <label class="form-check-label" for="a4Option1Radio">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" id="a4Option1Text" placeholder="Enter custom option" name="a4RadioButtonText1" value="<%= surveys.a4RadioButtonText1 %>">
+                                    </div>
+                                </label>
+                            </div>
+                         <div class="form-check">
+                            <input type="radio" class="form-check-input" id="a4Option2Radio" name="a4RadioButton1" value="Option 2" <%= surveys.a4RadioButton1 === "Option 2" ? 'checked' : '' %>>
+                            <label class="form-check-label" for="a4Option2Radio">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="a4Option2Text" placeholder="Enter custom option" name="a4RadioButtonText2" value="<%= surveys.a4RadioButtonText2 %>">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="a4Option3Radio" name="a4RadioButton1" value="Option 3" <%= surveys.a4RadioButton1 === "Option 3" ? 'checked' : '' %> >
+                            <label class="form-check-label" for="a4Option3Radio"> 
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="a4Option3Text" placeholder="Enter custom option" name="a4RadioButtonText3" value="<%= surveys.a4RadioButtonText3 %>" >
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                        <div class="form-group">
+                            <label for="q5TextField">Question 5</label>
+                            <input type="text" class="form-control" id="q5RadioButtonTextField" placeholder="Add your question" name="q5RadioButton" value="<%= surveys.q5RadioButton %>">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a5Option1Radio" name="a5RadioButton1" value="Option 1" <%= surveys.a5RadioButton1 === "Option 1" ? 'checked' : '' %>>
+                                <label class="form-check-label" for="a5Option1Radio">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" id="a5Option1Text" placeholder="Enter custom option" name="a5RadioButtonText1" value="<%= surveys.a5RadioButtonText1 %>">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a5Option2Radio" name="a5RadioButton1" value="Option 2" <%= surveys.a5RadioButton1 === "Option 2" ? 'checked' : '' %>>
+                                <label class="form-check-label" for="a5Option2Radio"> 
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="a5Option2Text" placeholder="Enter custom option" name="a5RadioButtonText2" value="<%= surveys.a5RadioButtonText2 %>" >
+                                   </div>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="a5Option3Radio" name="a5RadioButton1" value="Option 3" <%= surveys.a5RadioButton1 === "Option 3" ? 'checked' : '' %> >
+                                <label class="form-check-label" for="a5Option3Radio"> 
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="a5Option3Text" placeholder="Enter custom option" name="a5RadioButtonText3" value="<%= surveys.a5RadioButtonText3 %>" >
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <!-- submit and cancel buttons -->
+                    <button class="btn btn-primary" type="submit" id="submit-btn">
+                        <i class="fas fa-edit"></i>
+                        Submit
+                    </button>
+                    <a href="/surveys-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i>
+                        Cancel
+                    </a>
+                </form>
+            </div>
+       </div>
+    </div>
+</main>
+
+
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include ../partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include ../partials/footer.ejs %>

@@ -1,0 +1,69 @@
+<!--
+  Project Part 2
+  File name: templates.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include ../partials/header.ejs  %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include ../partials/main_nav.ejs %>
+
+
+<!--  This page includes surveys list section ---->
+
+<!-- main ---->
+<main class="surveys-container">
+  <h1 id="surveys-h1"><%= title %></h1>
+  <!-- contact lsit information ---->
+  <div class="row">
+    <div class="offset-md-1 col-md-11">
+      <div style="display: flex; flex-wrap: wrap;">
+        <% if (typeof profileName == 'string' && profileName) { %>
+          <div style="margin-right: 10px;">
+            <img src="/Assets/images/multiple_choice.jpg" alt="Add Image 1" class="button-image">
+            <br>
+            <a href="/surveys-list/add_multiple_choice" class="btn btn-primary" role="button" id="add-btn" style="padding: 8px 56px;">
+              <i class="fas fa-plus-circle"></i> Multiple Choice
+            </a>
+           </div>
+        <% } %>
+        <% if (typeof profileName == 'string' && profileName) { %>
+          <div style="margin-right: 10px;">
+            <img src="/Assets/images/short_answers.jpg" alt="Add Image 2" class="button-image">
+            <br>
+            <a href="/surveys-list/add_short_answers" class="btn btn-primary" role="button" id="add-btn"  style="padding: 8px 62px;">
+              <i class="fas fa-plus-circle"></i> Short Answer
+            </a>
+          </div>
+        <% } %>
+        <% if (typeof profileName == 'string' && profileName) { %>
+          <div style="margin-right: 10px;">
+            <img src="/Assets/images/dropdown.jpg" alt="Add Image 3" class="button-image">
+            <br>
+            <a href="/surveys-list/add_dropdown_options" class="btn btn-primary" role="button" id="add-btn"  style="padding: 8px 42px;">
+              <i class="fas fa-plus-circle"></i> Dropdown Options
+            </a>
+          </div>
+        <% } %>
+        <% if (typeof profileName == 'string' && profileName) { %>
+          <div>
+            <img src="/Assets/images/radio.jpg" alt="Add Image 4" class="button-image">
+            <br>
+            <a href="/surveys-list/add_radio" class="btn btn-primary" role="button" id="add-btn" style="padding: 8px 64px;">
+              <i class="fas fa-plus-circle"></i> Radio Button
+            </a>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include ../partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include ../partials/footer.ejs %>

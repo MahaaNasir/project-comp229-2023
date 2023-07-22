@@ -1,0 +1,190 @@
+<!--
+  Project Part 2
+  File name: add_multiple_choice.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include ../partials/header.ejs  %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include ../partials/main_nav.ejs %>
+
+<!--  This page includes add surveys section ---->
+
+<!-- main ---->
+<main class="surveys-container">
+    <h1 id="add-h1"><%= title %></h1>
+    <!-- add contact information ---->
+    <div class="row" id="add-form">
+        <div class="offset-md-3 col-md-6">
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <br>
+                    <!-- add user---->
+                    <label for="nameTextField">User</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField" 
+                    placeholder="Enter your name"
+                    name="name" required></input>
+                </div>
+            
+                <!-- add survey name---->
+                <div class="form-group">
+                    <label for="surveyNameTextField">Survey Name</label>
+                    <input type="text" class="form-control"
+                    id="surveyNameTextField" 
+                    placeholder="Enter Survey Name"
+                    name="surveyName" required></input>
+                </div>
+
+                <!-- add email---->
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField" 
+                    placeholder="Enter your email address"
+                    name="email" required></input>
+                </div>
+                    <!-- Survey type---->
+                    <div class="form-group">
+                        <label for="typeTextField">Survey Type </label>
+                        <input type="text" class="form-control"
+                        id="typeTextField" 
+                        value="Multiple Choice" name="surveyType" readonly></input>
+                    </div>
+                <br>
+            </div>
+            <!-- add questions---->
+            <div class="questions">
+                <div class="form-group">
+                    <label for="q1TextField">Question 1</label>
+                    <input type="text" class="form-control" id="q1TextField" placeholder="Add your question" name="q1" >
+                    <label for="a1TextField">Options</label>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a1Option1TextField" placeholder="Option 1" name="a1Option1">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a1Option2TextField" placeholder="Option 2" name="a1Option2">
+                        </div>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a1Option3TextField" placeholder="Option 3" name="a1Option3">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a1Option4TextField" placeholder="Option 4" name="a1Option4">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q2TextField">Question 2</label>
+                    <input type="text" class="form-control" id="q2TextField" placeholder="Add your question" name="q2" >
+                    <label for="a2TextField">Options</label>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a2Option1TextField" placeholder="Option 1" name="a2Option1">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a2Option2TextField" placeholder="Option 2" name="a2Option2" >
+                        </div>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a2Option3TextField" placeholder="Option 3" name="a2Option3">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a2Option4TextField" placeholder="Option 4" name="a2Option4">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q3TextField">Question 3</label>
+                    <input type="text" class="form-control" id="q3TextField" placeholder="Add your question" name="q3">
+                    <label for="a3TextField">Options</label>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a3Option1TextField" placeholder="Option 1" name="a3Option1">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a3Option2TextField" placeholder="Option 2" name="a3Option2">
+                        </div>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a3Option3TextField" placeholder="Option 3" name="a3Option3">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a3Option4TextField" placeholder="Option 4" name="a3Option4" >
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q4TextField">Question 4</label>
+                    <input type="text" class="form-control" id="q4TextField" placeholder="Add your question" name="q4" >
+                    <label for="a4TextField">Options</label>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a4Option1TextField" placeholder="Option 1" name="a4Option1" >
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a4Option2TextField" placeholder="Option 2" name="a4Option2" >
+                        </div>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a4Option3TextField" placeholder="Option 3" name="a4Option3" >
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a4Option4TextField" placeholder="Option 4" name="a4Option4">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q5TextField">Question 5</label>
+                    <input type="text" class="form-control" id="q5TextField" placeholder="Add your question" name="q5" >
+                    <label for="a5TextField">Options</label>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a5Option1TextField" placeholder="Option 1" name="a5Option1">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a5Option2TextField" placeholder="Option 2" name="a5Option2">
+                        </div>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a5Option3TextField" placeholder="Option 3" name="a5Option3">
+                        </div>
+                        <div class="col custom-col">
+                            <input type="text" class="form-control" id="a5Option4TextField" placeholder="Option 4" name="a5Option4">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- submit and cancel buttons---->
+                <button class="btn btn primary" type="submit" id="submit-btn">
+                    <i class="fas fa-edit"></i>
+                    Submit
+                </button>
+                <a href="/surveys-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>
+                    Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include ../partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include ../partials/footer.ejs %>

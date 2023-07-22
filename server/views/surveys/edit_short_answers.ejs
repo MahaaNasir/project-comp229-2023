@@ -1,0 +1,126 @@
+<!--
+  Project Part 2
+  File name: edit_short_answers.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include ../partials/header.ejs  %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include ../partials/main_nav.ejs %>
+
+<!--  This page includes edit surveys section ---->
+
+<!-- main ---->
+<main class="surveys-container">
+    <h1 id="edit-h1"><%= title %></h1>
+    <!-- edit contact information ---->
+    <div class="row" id="add-form">
+        <div class="offset-md-3 col-md-6">
+            <form class="form" method="POST">
+                <br>
+                <!-- edit user---->
+                <div class="form-group">
+                    <label for="nameTextField">User</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField" 
+                    placeholder="Enter your name"
+                    name="name" 
+                    value="<%= surveys.name %>"
+                    required>
+                </div>
+                
+                <!-- edit survey name ---->
+                <div class="form-group">
+                    <label for="surveyNameTextField">Survey Name</label>
+                    <input type="text" class="form-control"
+                    id="surveyNameTextField" 
+                    placeholder="Enter Survey Name"
+                    name="surveyName" 
+                    value="<%= surveys.surveyName %>"
+                    required>
+                </div>
+                <!-- edit email---->
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField" 
+                    placeholder="Enter your email address"
+                    name="email" 
+                    value="<%= surveys.email %>"
+                    required>
+                </div>
+
+                 <!-- Survey type---->
+                 <div class="form-group">
+                    <label for="typeTextField">Survey Type </label>
+                    <input type="text" class="form-control"
+                    id="typeTextField" 
+                    value="Short Answer" 
+                    name="surveyType" 
+                    readonly></input>
+                </div>
+                <br>
+            </div>
+
+            <!-- add questions---->
+            <div class="questions">
+                <div class="form-group">
+                    <label for="q1TextField">Question 1</label>
+                    <input type="text" class="form-control" id="q1ShortAnswerTextField" placeholder="Add your question" name="q1ShortAnswer" value="<%= surveys.q1ShortAnswer %>">
+                    <label for="a1ShortAnswerTextField">Short Answer</label>
+                    <input type="text" class="form-control" id="a1ShortAnswerTextField" placeholder="Add your answer" name="a1ShortAnswer" value="<%= surveys.a1ShortAnswer %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q2ShortAnswerTextField">Question 2</label>
+                    <input type="text" class="form-control" id="q2ShortAnswerTextField" placeholder="Add your question" name="q2ShortAnswer" value="<%= surveys.q2ShortAnswer %>">
+                    <label for="a2ShortAnswerTextField">Short Answer</label>
+                    <input type="text" class="form-control" id="a2ShortAnswerTextField" placeholder="Add your answer" name="a2ShortAnswer" value="<%= surveys.a2ShortAnswer %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q3ShortAnswerTextField">Question 3</label>
+                    <input type="text" class="form-control" id="q3ShortAnswerTextField" placeholder="Add your question" name="q3ShortAnswer" value="<%= surveys.q3ShortAnswer %>">
+                    <label for="a3ShortAnswerTextField">Short Answer</label>
+                    <input type="text" class="form-control" id="a3ShortAnswerTextField" placeholder="Add your answer" name="a3ShortAnswer" value="<%= surveys.a3ShortAnswer %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q4ShortAnswerTextField">Question 4</label>
+                    <input type="text" class="form-control" id="q4ShortAnswerTextField" placeholder="Add your question" name="q4ShortAnswer" value="<%= surveys.q4ShortAnswer %>">
+                    <label for="a4ShortAnswerTextField">Short Answer</label>
+                    <input type="text" class="form-control" id="a4ShortAnswerTextField" placeholder="Add your answer" name="a4ShortAnswer" value="<%= surveys.a4ShortAnswer %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="q5ShortAnswerTextField">Question 5</label>
+                    <input type="text" class="form-control" id="q5ShortAnswerTextField" placeholder="Add your question" name="q5ShortAnswer" value="<%= surveys.q5ShortAnswer %>">
+                    <label for="a5ShortAnswerTextField">Short Answer</label>
+                    <input type="text" class="form-control" id="a5ShortAnswerTextField" placeholder="Add your answer" name="a5ShortAnswer" value="<%= surveys.a5ShortAnswer %>">
+                </div>
+                <br>
+                <br>
+                <!-- submit and cancel buttons ---->
+                <button class="btn btn primary" type="submit" id="submit-btn">
+                    <i class="fas fa-edit"></i>
+                    Submit
+                </button>
+  
+                <a href="/surveys-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>
+                    Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include ../partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include ../partials/footer.ejs %>

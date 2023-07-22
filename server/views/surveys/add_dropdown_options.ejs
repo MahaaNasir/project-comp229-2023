@@ -1,0 +1,151 @@
+<!--
+  Project Part 2
+  File name: add_dropdown_options.ejs
+  Group 1
+  Due: Jul 16, 2023
+-->
+
+<!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
+<%- include ../partials/header.ejs  %>
+
+<!--  EJS template syntax includes the content of the "main_nav.ejs" partial file into this file ---->
+<%- include ../partials/main_nav.ejs %>
+
+<!--  This page includes add surveys section ---->
+
+<!-- main ---->
+<main class="surveys-container">
+    <h1 id="add-h1"><%= title %></h1>
+    <!-- add contact information ---->
+    <div class="row" id="add-form">
+        <div class="offset-md-3 col-md-6">
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <br>
+                    <!-- add user---->
+                    <label for="nameTextField">User</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField" 
+                    placeholder="Enter your name"
+                    name="name" required></input>
+                </div>
+                <!-- add survey name---->
+                <div class="form-group">
+                    <label for="surveyNameTextField">Survey Name</label>
+                    <input type="text" class="form-control"
+                    id="surveyNameTextField" 
+                    placeholder="Enter Survey Name"
+                    name="surveyName" required></input>
+                </div>
+
+                <!-- add email---->
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField" 
+                    placeholder="Enter your email address"
+                    name="email" required></input>
+                </div>
+
+                <!-- Survey type---->
+                <div class="form-group">
+                    <label for="typeTextField">Survey Type </label>
+                    <input type="text" class="form-control"
+                    id="typeTextField" 
+                    value="Dropdown Options" name="surveyType" readonly></input>
+                </div>
+                <br>
+            </div>
+    
+            <!-- add questions  -->
+           <div class="questions">
+                <div class="form-group">
+                    <label for="q1DropdownTextField">Question 1</label>
+                    <input type="text" class="form-control" id="q1DropdownTextField" placeholder="Add your question" name="q1Dropdown">
+                    <!-- Dropdown for options -->
+                    <div class="form-check">
+                        <label for="q1OptionDropdown" >Select an option:</label>
+                        <select class="form-control" id="q1OptionDropdown" name="q1Option">
+                            <option value="" disabled selected>Yes/No</option>
+                            <option value="Option 1" name="q1DropdownOption1" >Yes</option>
+                            <option value="Option 2" name="q1DropdownOption2" >No</option>
+                        </select>  
+                    </div>
+                </div>
+            <br>
+                <div class="form-group">
+                    <label for="q2DropdownTextField">Question 2</label>
+                    <input type="text" class="form-control" id="q2TextField" placeholder="Add your question" name="q2Dropdown">
+                    <!-- Dropdown for options -->
+                    <div class="form-check">
+                        <label for="q2OptionDropdown" >Select an option:</label>
+                        <select class="form-control" id="q2OptionDropdown" name="q2Option">
+                            <option value="" disabled selected>Yes/No</option>
+                            <option value="Option 1" name="q2DropdownOption1">Yes</option>
+                            <option value="Option 2" name="q2DropdownOption2" >No</option>
+                        </select>  
+                    </div>
+                </div>
+            <br>
+                <div class="form-group">
+                    <label for="q3DropdownTextField">Question 3</label>
+                    <input type="text" class="form-control" id="q3TextField" placeholder="Add your question" name="q3Dropdown">
+                    <!-- Dropdown for options -->
+                    <div class="form-check">
+                        <label for="q3OptionDropdown" >Select an option:</label>
+                        <select class="form-control" id="q3OptionDropdown" name="q3Option">
+                            <option value="" disabled selected>Yes/No</option>
+                            <option value="Option 1" name="q3DropdownOption1">Yes</option>
+                            <option value="Option 2" name="q3DropdownOption2">No</option>
+                        </select>  
+                    </div>
+                </div>
+            <br>
+                <div class="form-group">
+                    <label for="q4DropdownTextField">Question 4</label>
+                    <input type="text" class="form-control" id="q4TextField" placeholder="Add your question" name="q4Dropdown">
+                    <!-- Dropdown for options -->
+                    <div class="form-check">
+                        <label for="q4OptionDropdown" >Select an option:</label>
+                        <select class="form-control" id="q4OptionDropdown" name="q4Option">
+                            <option value="" disabled selected>Yes/No</option>
+                            <option value="Option 1" name="q4DropdownOption1">Yes</option>
+                            <option value="Option 2" name="q4DropdownOption2">No</option>
+                        </select>  
+                    </div>
+                </div>
+            <br>
+                <div class="form-group">
+                    <label for="q5DropdownTextField">Question 5</label>
+                    <input type="text" class="form-control" id="q5TextField" placeholder="Add your question" name="q5Dropdown">
+                    <!-- Dropdown for options -->
+                    <div class="form-check">
+                        <label for="q5OptionDropdown" >Select an option:</label>
+                        <select class="form-control" id="q5OptionDropdown" name="q5Option">
+                            <option value="" disabled selected>Yes/No</option>
+                            <option value="Option 1" name="q5DropdownOption1">Yes</option>
+                            <option value="Option 2" name="q5DropdownOption2">No</option>
+                        </select>  
+                    </div>
+                </div>
+                <br> <br>
+            <!-- submit and cancel buttons -->
+            <button class="btn btn-primary" type="submit" id="submit-btn">
+                <i class="fas fa-edit"></i>
+                Submit
+            </button>
+            <a href="/surveys-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i>
+                Cancel
+            </a>
+        </div>
+    </form>
+</main>
+
+
+
+<!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
+<%- include ../partials/bottom_nav.ejs %>
+
+<!--  EJS template syntax includes the content of the "footer.ejs" partial file into this file ---->
+<%- include ../partials/footer.ejs %>

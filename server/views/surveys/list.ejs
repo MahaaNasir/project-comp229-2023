@@ -21,7 +21,7 @@
     <div class="row">
         <div class="offset-md-1 col-md-11">
             <% if (typeof profileName == 'string' && profileName) { %>
-            <a href="/surveys-list/add" class="btn btn-primary" role="button" id="add-btn">
+            <a href="/surveys-list/templates" class="btn btn-primary" role="button" id="add-btn">
                 <i class="fas fa-plus-circle"></i> Add a Survey</a>
             <% } %>
             <br>
@@ -30,17 +30,19 @@
                 <tr class="d-flex">
                     <% if (typeof profileName == 'string' && profileName) { %>
                         <th class="text-center col-2">User</th>
-                        <th class="text-center col-2">Phone</th>
                         <th class="text-center col-2">Survey Name</th>
                         <th class="text-center col-4">Email</th>
+                        <th class="text-center col-2">Survey Type</th>
+
 
                         <th class="text-center col-1"></th>
                         <th class="text-center col-1"></th>
                     <% } else { %>
                         <th class="text-center col-2">User</th>
-                        <th class="text-center col-2">Phone</th>
                         <th class="text-center col-2">Survey Name</th>
                         <th class="text-center col-4">Email</th>
+                        <th class="text-center col-2">Survey Type</th>
+
 
                     <% } %>
                 </tr>
@@ -52,24 +54,44 @@
                     <tr class="d-flex">
                         <% if (typeof profileName == 'string' && profileName) { %>
                             <td class="text-center col-2"><%= SurveysList[count].name %></td>
-                            <td class="text-center col-2"><%= SurveysList[count].phone %></td>
                             <td class="text-center col-2"><%= SurveysList[count].surveyName %></td>
                             <td class="text-center col-4"><%= SurveysList[count].email %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].surveyType %></td>
 
-                            <!-- buttons to edit or delete the row ---->
+                    
+                            <!-- buttons to edit or delete the row according to the templates---->
                             <td class="text-center col-1">
-                                <a href="/surveys-list/edit/<%= SurveysList[count]._id %>" class="btn btn-primary btn-sm" id="edit">
-                                <i class="fas fa-pencil-alt"></i> <br> Edit</a>
+                                <% if (SurveysList[count].surveyType === "Dropdown Options") { %>
+                                    <a href="/surveys-list/edit_dropdown_options/<%= SurveysList[count]._id %>" class="btn btn-primary btn-sm" id="edit">
+                                        <i class="fas fa-pencil-alt"></i><br> Edit
+                                    </a>
+                                <% } else if (SurveysList[count].surveyType === "Multiple Choice") { %>
+                                    <a href="/surveys-list/edit_multiple_choice/<%= SurveysList[count]._id %>" class="btn btn-primary btn-sm" id="edit">
+                                        <i class="fas fa-pencil-alt"></i><br> Edit
+                                    </a>
+                                 <% } else if (SurveysList[count].surveyType === "Short Answer") { %>
+                                    <a href="/surveys-list/edit_short_answers/<%= SurveysList[count]._id %>" class="btn btn-primary btn-sm" id="edit">
+                                        <i class="fas fa-pencil-alt"></i><br> Edit
+                                    </a>
+                                <% } else { %>
+                                    <a href="/surveys-list/edit_radio/<%= SurveysList[count]._id %>" class="btn btn-primary btn-sm" id="edit">
+                                        <i class="fas fa-pencil-alt"></i><br> Edit
+                                    </a>
+                                <% } %>
                             </td>
+                            
                             <td class="text-center col-1">
                                 <a href="/surveys-list/delete/<%= SurveysList[count]._id %>" class="btn btn-danger btn-sm" id="delete">
-                                <i class="fas fa-trash-alt"></i> Delete</a>
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
                             </td>
+                            
                         <% } else { %>
                             <td class="text-center col-2"><%= SurveysList[count].name %></td>
-                            <td class="text-center col-2"><%= SurveysList[count].phone %></td>
                             <td class="text-center col-2"><%= SurveysList[count].surveyName %></td>
                             <td class="text-center col-4"><%= SurveysList[count].email %></td>
+                            <td class="text-center col-2"><%= SurveysList[count].surveyType %></td>
+
                         <% } %>
                     </tr>
                 <% } %>
