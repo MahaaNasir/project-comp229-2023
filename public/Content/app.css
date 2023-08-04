@@ -46,6 +46,60 @@ body{
   background: rgba(61, 61, 122, 0.872);
 }
 
+/*Icons*/
+
+.social{
+  transition: transform 4s;
+  margin-right: 20px;
+
+}
+.social:hover{
+  transition: translateY(-5px);
+}
+
+.social-facebook{
+  color:#9b9898;
+  transition:color 0.2s;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 25px ;
+}
+.social-facebook:hover {
+  color:rgb(255, 255, 255);
+}
+
+.social-instagram{
+  color:#9b9898;
+  transition:color 0.2s;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 25px ;
+}
+.social-instagram:hover {
+  color:rgb(255, 255, 255);
+}
+
+.social-linkedin{
+  color:#9b9898;
+  transition:color 0.2s;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 25px ;
+}
+.social-linkedin:hover {
+  color:rgb(255, 255, 255);
+}
+.social-twitter{
+  color:#9b9898;
+  transition:color 0.2s;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 25px ;
+}
+.social-twitter:hover {
+  color:rgb(255, 255, 255);
+}
+
 /************************* index.ejs ********************************/
 /*HOME page*/
 
