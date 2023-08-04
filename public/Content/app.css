@@ -644,3 +644,8 @@ form input, form textarea{
 .custom-col {
   padding: 5px; /* padding to create even gaps between options */
 }
+#temp-h1{
+  margin-left: 3%; 
+  color: rgb(255, 255, 255);
+  margin-top: -1.5%;
+}
