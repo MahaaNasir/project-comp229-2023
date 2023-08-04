@@ -37,7 +37,7 @@
              <% } else { %>
              <li class="nav-item">
              <% } %>
-              <a class="nav-link " href="/about"> About </a>
+              <a class="nav-link " href="/about"> <i class="fa-solid fa-circle-info"></i> About </a>
             </li>
 
             <% if (title == "Contact") { %>
@@ -45,7 +45,7 @@
               <% } else { %>
               <li class="nav-item ">
               <% } %>  
-               <a class="nav-link " href="/contact"> Contact </a>
+               <a class="nav-link " href="/contact"><i class="fa-solid fa-message"></i> Contact </a>
             </li>
 
             <% if (title == "Surveys") { %>
@@ -53,7 +53,7 @@
                 <% } else { %>
                 <li class="nav-item ">
                 <% } %>  
-                 <a class="nav-link " href="/surveys-list"> Surveys </a>
+                 <a class="nav-link " href="/surveys-list"><i class="fa-solid fa-square-poll-vertical"></i> Surveys </a>
               </li>
               
               <% if (typeof profileName == 'string' && profileName) { %>
