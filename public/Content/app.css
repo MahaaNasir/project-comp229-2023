@@ -255,10 +255,10 @@ form input, form textarea{
   width: 90%;
   border: 0;
   outline: none;
-  background: rgba(61, 61, 100, 0.817);
+  background: rgba(223, 223, 255, 0.817);
   padding: 10px;
   margin: 5px 0;
-  color:#ffffff;
+  color:#1c2068;
   font-size: 14px;
   border-radius: 7px;
 }
