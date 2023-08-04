@@ -437,6 +437,14 @@ form input, form textarea{
   margin-left: 20%;
 }
 
+#login-h3{
+  color: rgb(149, 150, 214);
+  margin-top: -4%;
+  margin-bottom: 4%;
+  font-size: 15px;
+  margin-left: 29%;
+}
+
 .btn-success {
   background-color: #110b62;
   color: #fff;
