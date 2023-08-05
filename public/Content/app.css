@@ -2,9 +2,8 @@
 
 /*
   File name: app.css
-  Project Part 2
+  Project 
   Group 1
-  Due: Jul 16, 2023
 */
 
 body{
@@ -106,7 +105,9 @@ body{
 .intro{
   margin-top: -1%;
 }
-
+.left{
+  margin-top: -25%;
+}
 h1{
   color: rgb(249, 200, 200);
   margin: 0;
@@ -115,7 +116,7 @@ h1{
   position: absolute;
   transform: translate(-50%, -50%);
   font-weight:bolder;
-  margin-top: 9.5%;
+  margin-top: -3%;
 }
 
 h2{
@@ -126,16 +127,15 @@ h2{
   position: absolute;
   transform: translate(-50%, -50%);
   font-weight:bolder;
-  margin-top: 4.5%;
+  margin-top: 1%;
 }
 
 h1 span{
   color: rgb(215, 203, 127); 
   padding: 10px 7px; 
-  font-family: Tilt Prism;
+  font-family: Alegreya;
   display: table-cell;
-  font-size: 1.5em;
-  text-shadow: 0 15px 25px rgb(215, 203, 127);
+  font-size: 1.2em;
 }
 
 h2 span{
@@ -144,9 +144,11 @@ h2 span{
   font-family: Caveat;
   display: table-cell;
   font-size: 1.2em;
-  text-shadow: 0 15px 25px rgb(215, 203, 127);
 }
-
+.left-survey{
+  margin-right: 70%;
+  margin-top: 19%;
+ }
 .image-container{
  width: 380px;
  height: 290px;
@@ -157,6 +159,170 @@ h2 span{
   width: 440px;
   height: 290px;
  }
+#click-here{
+  margin-top: 2px;
+ }
+
+/*FRONT IMAGE*/
+ .image-container{
+  position: relative;
+  width: 340px;
+  height: 250px;
+  transition: 0.5s;
+  margin-left: 58%;
+  margin-top: 5.5%;
+ }
+ 
+ .image-container .lights{
+  position: absolute;
+  inset:0;
+  background: black;
+  overflow: hidden;
+ }
+ 
+ .image-container .lights::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent,rgb(229, 236, 163),rgb(159, 212, 235),rgb(59, 86, 224),transparent);
+  animation: light 4s linear infinite;
+ }
+ @keyframes light 
+ {
+  0%{
+      transform: translate(-50%,-50%) rotate(0deg);
+   }
+  100%{
+      transform: translate(-50%,-50%) rotate(360deg);
+   }
+ }
+ 
+ .image-container .lights::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: rgb(62, 55, 135);
+ }
+ 
+ .image-container .circle{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 190px;
+  background: black;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 50%; 
+ }
+ 
+ .image-container:hover .circle{
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+ }
+ 
+ .image-container .circle::before{
+  content: '';
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 500px;
+  height: 150px;
+  background: linear-gradient(transparent,rgb(229, 236, 163),rgb(159, 212, 235),rgb(59, 86, 224),transparent);
+  animation: light2 6s linear infinite;
+  border-radius: 50%;
+ }
+ 
+ @keyframes light2
+ {
+  0%{
+      transform: translate(-50%,-50%) rotate(360deg);
+  }
+  100%{
+      transform: translate(-50%,-50%) rotate(0deg);
+  }
+ }
+ 
+ .image-container .circle::after{
+  position: absolute;
+  content: '';
+  background: rgb(235, 255, 197);
+  inset: 3px;
+  border-radius: 50%;
+ }
+ .image-container .circle img{
+  position: absolute;
+  top: 3px;
+  left: 0.8px;
+  z-index: 1;
+  width: 99.5% ;
+  height: 97.5% ; 
+
+ }
+ 
+ .image-container .content{
+  padding: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+ }
+ 
+ .image-container .content .details h2{
+  padding: 40px;
+  width: 100%;
+  margin-left: -10%;  
+  transform: translateY(145px);
+  text-shadow: 0 15px 25px rgb(239, 243, 188);
+  font-size: 2.2em;
+  font-weight: 700;
+  color: rgb(247, 253, 121);
+  margin-top: -32%;
+  transition: 0.5s;
+  font-family: Caveat;
+ }
+ .image-container:hover .content .details h2{
+  font-weight: 700;
+  font-size: 2.3em;
+  margin-top: -32%;
+ }
+   
+ .image-container .content .details p{
+   padding: 40px;
+   width: 100%;
+   margin-left: -2%;  
+   transform: translateY(145px);    
+   font-size: 1.5em;
+   font-weight: 500;
+   color: rgb(249, 227, 103);
+   margin-top: -87%;
+   transition: 0.5s;
+   font-family: Caveat;
+   text-decoration: none;
+
+ }
+ a{
+  text-decoration: none;
+}
+ 
+ .image-container:hover .content .details p{
+  font-weight: 500;
+  margin-top: -79%;
+  font-size: 1.6em;
+  text-decoration: none;
+
+ }
+
+
 /************************* bottom_nav.ejs ********************************/
 .navbar-text{
  margin-left: 2%;
@@ -343,6 +509,230 @@ form input, form textarea{
   color:rgb(129, 133, 71);
   margin-top: 10px;
   display: block;
+}
+
+  /*Landing page*/
+@media (max-width: 1176px) and (max-height:1026px) {
+  .left-survey{
+    margin-right: 70%;
+    margin-top: 25%;
+   }
+  .left{
+    margin-top: -30%;
+  }
+  h1{
+    left: 30%;
+    margin-top: -3%;
+  }
+  
+  h2{
+    left: 30%;
+    margin-top: 1%;
+  }
+  .image-container{
+    margin-left: 52%;
+    margin-top: 7%;
+   }
+}
+@media (max-width: 1063px) and (max-height:1026px) {
+  .left-survey{
+    margin-right: 70%;
+    margin-top: 30%;
+   }
+  .left{
+    margin-top: -35%;
+    margin-left: -5%;
+  }
+  h1{
+    left: 30%;
+    margin-top: -3%;
+  }
+  
+  h2{
+    left: 30%;
+    margin-top: 1%;
+  }
+  .image-container{
+    margin-left: 52%;
+    margin-top: 7%;
+   }
+}
+
+
+@media (max-width: 848px) and (max-height:1026px) {
+  .left-survey {
+    margin-right: 70%;
+    margin-top: 40%;
+    margin-bottom: -4%;
+
+   }
+  .left {
+    margin-top: 5%;
+    margin-left: -5%;
+  }
+  h1{
+    left: 30%;
+    margin-top: -5%;
+    font-size: 25px;
+
+  }
+  
+  h2{
+    left: 30%;
+    margin-top: 1%;   
+    font-size: 20px;    margin-bottom: 60px;
+
+  }
+  .image-container{
+    margin-left: 52%;
+    margin-top: 25%;
+
+   }
+}
+@media (max-width: 830px) and (max-height:1026px) {
+ .left-survey   .image-container{
+    margin-top: -120%;
+    margin-bottom: -95%;
+
+   }
+}
+@media (max-width: 713px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -115%;
+     margin-bottom: -115%;
+ 
+    }
+ }
+ @media (max-width: 646px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -105%;
+     margin-bottom: -130%;
+ margin-left: 65%;
+    }
+ }
+ @media (max-width: 617px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -105%;
+     margin-bottom: -130%;
+     margin-left: 65%;
+    }
+    h1 span{
+      left: 30%;
+      margin-top: -5%;
+      font-size: 25px;
+    }
+    
+    h2 span{
+      left: 30%;
+      margin-top: 1%;   
+      font-size: 20px;  
+    }
+ }
+ @media (max-width: 646px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -105%;
+     margin-bottom: -160%;
+     margin-left: 65%;
+    }
+ }
+ @media (max-width: 530px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -105%;
+     margin-bottom: -170%;
+     margin-left: 65%;
+    }
+    h1 span{
+      left: 30%;
+      margin-top: -5%;
+      font-size: 23px;
+    }
+    
+    h2 span{
+      left: 30%;
+      margin-top: 1%;   
+      font-size: 17px;  
+    }
+ }
+ @media (max-width: 472px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -105%;
+     margin-bottom: -170%;
+     margin-left: 45%;
+    }
+    h1 span{
+      left: 30%;
+      margin-top: -5%;
+      font-size: 20px;
+    }
+    
+    h2 span{
+      left: 30%;
+      margin-top: 1%;   
+      font-size: 17px;  
+    }
+ }
+ @media (max-width: 428px) and (max-height:1026px) {
+  .left-survey   .image-container{
+     margin-top: -95%;
+     margin-bottom: -200%;
+     margin-left: 35%;
+    }
+    h1 span{
+      left: 30%;
+      margin-top: -5%;
+      font-size: 20px;
+    }
+    
+    h2 span{
+      left: 30%;
+      margin-top: 1%;   
+      font-size: 17px;  
+    }
+ }
+ @media (max-width: 389px) and (max-height:1026px) {
+    .left-survey   .image-container{
+     margin-top: -90%;
+     margin-bottom: -210%;
+     margin-left: 19%;
+    }
+    h1 span{
+      left: 30%;
+      margin-top: -5%;
+      font-size: 20px;
+    }
+    
+    h2 span{
+      left: 30%;
+      margin-top: 1%;   
+      font-size: 17px;  
+    }
+ }
+@media (max-width: 939px) and (max-height:1026px) {
+  .left-survey{
+    margin-right: 70%;
+    margin-top: 70%;
+    margin-bottom: -22%;
+   }
+  .left{
+    margin-top: -1%;
+    margin-left: -15%;
+    margin-bottom: -50%;
+
+  }
+  h1{
+    left: 30%;
+    margin-top: -3%;
+  }
+  
+  h2{
+    left: 30%;
+    margin-top: -1%;
+  }
+  .image-container{
+    margin-left: 98%;
+    margin-top: -150%;
+   }
+   
 }
 
 

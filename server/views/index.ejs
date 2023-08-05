@@ -1,8 +1,7 @@
 <!--
-  Project Part 2
+  Project 
   File name: index.ejs
   Group 1
-  Due: Jul 16, 2023
 -->
 
 <!--  EJS template syntax includes the content of the "header.ejs" partial file into this file ---->
@@ -12,32 +11,55 @@
 <%- include partials/main_nav.ejs %>
 
 
-<!-- Content to the Home page ---->
+<!-- If the user is not logged in, redirect to home otherwise redirect to add a survey page, when clicked on create a survey ---->
 
-<!-- main -->
-<main>
-  <div class="pages-container">
-    <div class="left">
-      <!-- Introduction text -->
-      <a class="intro" href="/login">
-        <h2>
-          <span>Create a</span>
-        </h2>
-        <h1>
-          <span>S U R V E Y</span>
-        </h1>
-      </a>
-    </div>
-  </div>
-
-    <!-- Emoji and Name -->
-    <div class="right">
-      <div class="image-container">
-          <img src="Assets/images/front.png" id="front-image">
+<div class="left-survey">
+ <div class="image-container">
+    <div class="lights"></div>
+      <div class="circle">
+        <% if (typeof profileName === 'string' && profileName.trim() !== '') { %>
+  
+        <a href="/surveys-list" class="intro">
+            <img src="Assets/images/click2.png" alt="">          
+      </div>
+      <div class="content">
+        <div class="details">
+          <p>To Create</p>
+          <h2> A Survey!
+           </h2>
+        </a>
+        <% } else { %>
+          <!-- User is not logged in, redirect to the login page -->
+          <a href="/login" class="intro">
+            <img src="Assets/images/click2.png" alt="">          
+      </div>
+      <div class="content">
+        <div class="details">
+          <p>To Create</p>
+          <h2> A Survey!</h2>
+          </a>
+        <% } %>
+        </div>
       </div>
     </div>
   </div>
-</main>
+</div>
+ <div class="left">
+  <h1>
+    <span>Step into the  survey revolution </span>
+  </h1>
+  <h2>
+    <span>Design, collect, and conquer with ease!</span>
+  </h2>
+</div>
+
+<!-- Emoji and Name -->
+<div class="right">
+  <div class="image-container">
+      <img src="Assets/images/front.png" id="front-image">
+  </div>
+</div>
+
 
 <!--  EJS template syntax includes the content of the "bottom_nav.ejs" partial file into this file ---->
 <%- include partials/bottom_nav.ejs %>
