@@ -1,8 +1,7 @@
 /*
   File name: app.js
-  Project Part 2
+  Project
   Group 1
-  Due: Jul 16, 2023 
 */
 
 

@@ -1,8 +1,7 @@
 /*
   File name: user.js
-  Project Part 2
+  Project
   Group 1
-  Due: Jul 16, 2023
 */
 
 let mongoose = require('mongoose');
