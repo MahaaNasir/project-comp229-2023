@@ -27,7 +27,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "project",
-  "main": "server.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MahaaNasir/Assignment1-COMP229-Maha.git"
